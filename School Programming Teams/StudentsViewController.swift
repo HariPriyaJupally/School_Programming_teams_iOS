@@ -10,9 +10,19 @@ import UIKit
 
 class StudentsViewController: UIViewController {
 
+    
+    @IBOutlet weak var student0LBL: UILabel!
+    
+    @IBOutlet weak var student1LBL: UILabel!
+    
+    @IBOutlet weak var student2LBL: UILabel!
+    var team: Team!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        student0LBL.text = team.students[0]
+        student1LBL.text = team.students[1]
+        student2LBL.text = team.students[2]
+        navigationItem.title = team.name
         // Do any additional setup after loading the view.
     }
     

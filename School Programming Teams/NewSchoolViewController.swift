@@ -15,6 +15,21 @@ class NewSchoolViewController: UIViewController {
     
     @IBOutlet weak var coachTF: UITextField!
     
+    var newSchool: School!
+    
+    @IBAction func doneBTN(_ sender: Any) {
+        let name = nameTF.text!
+        let coach = coachTF.text!
+        Schools.shared.add(school: School(name: name, coach: coach))
+        self.dismiss(animated: true, completion: nil)
+
+    }
+    
+    @IBAction func cancelBTN(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

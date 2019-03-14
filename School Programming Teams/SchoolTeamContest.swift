@@ -31,10 +31,10 @@ class School: Equatable{
     var coach: String
     var teams: [Team]
     
-    init(name: String, coach: String, teams: [Team]) {
+    init(name: String, coach: String) {
         self.name = name
         self.coach = coach
-        self.teams = teams
+        self.teams = []
     }
     
     func addTeam(name: String, students: [String]) {

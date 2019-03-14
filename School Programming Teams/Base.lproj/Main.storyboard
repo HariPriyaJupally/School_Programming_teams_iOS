@@ -23,8 +23,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Add New School" id="NIh-my-ZmD">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="uyS-29-EIV"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ax1-QX-cal"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="uyS-29-EIV">
+                                            <connections>
+                                                <action selector="cancelBTN:" destination="XwW-Jy-qZh" id="xdM-jR-RSr"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ax1-QX-cal">
+                                            <connections>
+                                                <action selector="doneBTN:" destination="XwW-Jy-qZh" id="p2W-Pg-RPP"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -82,8 +90,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Add New Team" id="9mZ-YY-xow">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="QDa-kg-GuB"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="bQG-1F-3Ya"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="QDa-kg-GuB">
+                                            <connections>
+                                                <action selector="cancelBTN:" destination="XUn-6q-A0b" id="fR9-jN-ee9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="bQG-1F-3Ya">
+                                            <connections>
+                                                <action selector="doneBTN:" destination="XUn-6q-A0b" id="3ld-SQ-XXg"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -147,6 +163,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5ff-1U-H3y"/>
                     </view>
+                    <connections>
+                        <outlet property="student0TF" destination="gIj-k1-H7p" id="uI5-BH-rq7"/>
+                        <outlet property="student1TF" destination="wui-EK-F24" id="JDy-xb-aFV"/>
+                        <outlet property="student2TF" destination="Q3l-M7-Ope" id="zQK-2J-iKJ"/>
+                        <outlet property="teamNameTF" destination="MTh-Id-32p" id="fke-tx-sKB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQL-5a-dYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,7 +234,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="dce-CM-zPa">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="teams" id="dce-CM-zPa">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dce-CM-zPa" id="LUQ-kY-CL4">
@@ -290,15 +312,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UM-sf-SC7">
-                                <rect key="frame" x="166" y="171" width="75" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UM-sf-SC7">
+                                <rect key="frame" x="166" y="171" width="73" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rx4-Wd-P71">
-                                <rect key="frame" x="166" y="221" width="76" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rx4-Wd-P71">
+                                <rect key="frame" x="166" y="221" width="75" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -309,10 +331,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Students" id="EHl-W6-3yp"/>
+                    <connections>
+                        <outlet property="student0LBL" destination="DNe-f5-VwP" id="V6S-s8-YEp"/>
+                        <outlet property="student1LBL" destination="7UM-sf-SC7" id="5QQ-rn-W4i"/>
+                        <outlet property="student2LBL" destination="rx4-Wd-P71" id="gtO-zG-ZT3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="797.60000000000002" y="131.78410794602701"/>
+            <point key="canvasLocation" x="801" y="132"/>
         </scene>
     </scenes>
 </document>
