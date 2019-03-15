@@ -54,11 +54,11 @@ class TeamsTableViewController: UITableViewController {
     */
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Team Details"{
+        if segue.identifier == "teamdetails"{
             let studentsVC = segue.destination as! StudentsViewController
             studentsVC.team = school.teams[tableView.indexPathForSelectedRow!.row]
         }
-        else if segue.identifier == "New Team"{
+        else if segue.identifier == "newteam"{
             let newTeamsVC = segue.destination as! NewTeamViewController
             newTeamsVC.school = school
         }

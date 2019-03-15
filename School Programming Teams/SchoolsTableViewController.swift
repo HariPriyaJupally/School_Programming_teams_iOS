@@ -44,7 +44,7 @@ class SchoolsTableViewController: UITableViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "School Details"{
+        if segue.identifier == "school"{
             let schoolDetailsVC = segue.destination as! TeamsTableViewController
             schoolDetailsVC.school = Schools.shared[tableView.indexPathForSelectedRow!.row]
         }
